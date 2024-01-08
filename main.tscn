@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://cababiif3k27u"]
+
+[ext_resource type="PackedScene" uid="uid://beya0lu2fqk3c" path="res://tile_map.tscn" id="1_vkgce"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_vkgce")]
+position = Vector2(42, 37)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 319)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="score_label" type="Label" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -269.0
+offset_top = -72.0
+offset_right = 31.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Score :"
+vertical_alignment = 1
+
+[node name="turns_label" type="Label" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -381.0
+offset_top = 87.0
+offset_right = -56.0
+offset_bottom = 156.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Turns Taken :"
+vertical_alignment = 1
+
+[node name="Objective" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -402.0
+offset_top = 82.0
+offset_right = -57.0
+offset_bottom = 151.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "Match 3 Cards"
+vertical_alignment = 1
